@@ -16,7 +16,10 @@ optional arguments:
   -p, --rename          trace rename events
   -c, --create          trace create events
   -d, --delete          trace delete events
+```
+
 ## How to run?
+```
 1. Clone the repository `git clone https://github.com/kanurag94/filemonitor.git`
 2. `cd filemonitor`
 3. For debian and ubuntu: `sudo make all`
