@@ -20,7 +20,7 @@ optional arguments:
 
 ## How to run?
 ```
-1. Clone the repository `git clone https://github.com/kanurag94/filemonitor.git`
+1. Clone the repository `git clone https://github.com/kamalcou/filemonitor.git`
 2. `cd filemonitor`
 3. For debian and ubuntu: `sudo make all`
 4. `filemonitor -h` to check
