@@ -16,11 +16,17 @@ optional arguments:
   -p, --rename          trace rename events
   -c, --create          trace create events
   -d, --delete          trace delete events
+## How to run?
+1. Clone the repository `git clone https://github.com/kanurag94/filemonitor.git`
+2. `cd filemonitor`
+3. For debian and ubuntu: `sudo make all`
+4. `filemonitor -h` to check
+5. For other distributions visit: https://github.com/iovisor/bcc/blob/master/INSTALL.md and run `sudo run.sh`
 
 Example:
-    ./filemonitor -r                         # traces read of /var/log/syslog
-    ./filemonitor -f /path/to/config         # traces filepaths in path for all events
-    ./filemonitor -f /path/to/config -d      # traces filepaths in path for delete events
+    filemonitor -r                         # traces read of /var/log/syslog (written in the config.txt file)
+    filemonitor -f /path/to/config         # traces filepaths in path for all events
+    filemonitor -f /path/to/config -d      # traces filepaths in path for delete events
 ```
 
 ### Output
@@ -34,12 +40,7 @@ PID    UID  CPU  PROC         FPATH                            COMM            O
 11463  1000 0                 a                                rm              DELETE
 ```
 
-## How to run?
-1. Clone the repository `git clone https://github.com/kanurag94/filemonitor.git`
-2. `cd filemonitor`
-3. For debian and ubuntu: `sudo make all`
-4. `filemonitor -h` to check
-5. For other distributions visit: https://github.com/iovisor/bcc/blob/master/INSTALL.md and run `sudo run.sh`
+
 
 ## How this works?
 1. A BPFHASH map keeps inode entries of the files supplied as config.
